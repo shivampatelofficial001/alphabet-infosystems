@@ -1,7 +1,7 @@
 // Alphabet Infosystems: site behaviour
 
 var FORM_ENDPOINT = "https://formspree.io/f/mvkaowdp";
-var CONTACT_EMAIL = "shivam@alphabetinfosystems.com";
+var CONTACT_EMAIL = "shivampatelofficial001@gmail.com";
 
 var yearEls = document.querySelectorAll("[data-year]");
 for (var y = 0; y < yearEls.length; y++) yearEls[y].textContent = new Date().getFullYear();

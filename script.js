@@ -94,7 +94,10 @@ if (form) {
     e.preventDefault();
 
     var data = new FormData(form);
-    if (data.get("_gotcha")) return;
+    if (data.get("_gotcha")) {
+  showStatus("Please reload the page and try again.", true);
+  return;
+    }
 
     var name = String(data.get("name") || "").trim();
     var email = String(data.get("email") || "").trim();

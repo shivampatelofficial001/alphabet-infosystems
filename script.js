@@ -114,18 +114,23 @@ if (form) {
     showStatus("Sending...", false);
 
     fetch(FORM_ENDPOINT, {
-      method: "POST",
-      body: data,
-      headers: { Accept: "application/json" }
-    }).then(function (res) {
-      if (!res.ok) throw new Error("Request failed");
-      form.reset();
-      showStatus("Message sent. I will reply by email.", false);
-    }).catch(function () {
-      showStatus("The message was not sent. Try again, or write to " + CONTACT_EMAIL + ".", true);
-    }).then(function () {
-      submitBtn.disabled = false;
-    });
+  method: "POST",
+  body: data,
+  headers: { Accept: "application/json" }
+}).then(function (res) {
+  return res.json().catch(function () { return {}; }).then(function (json) {
+    if (!res.ok) {
+      var msg = (json.errors && json.errors.map(function (e) { return e.message; }).join(", ")) || json.error || ("Error " + res.status);
+      throw new Error(msg);
+    }
+    form.reset();
+    showStatus("Message sent. I will reply by email.", false);
+  });
+}).catch(function (err) {
+  showStatus("The message was not sent (" + err.message + "). Try again, or write to " + CONTACT_EMAIL + ".", true);
+}).then(function () {
+  submitBtn.disabled = false;
+});
   });
 }
 

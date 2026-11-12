@@ -22,6 +22,21 @@ if (menuToggle) {
   });
 }
 
+function trapMenuFocus(e) {
+  if (e.key !== "Tab" || !mainNav || !mainNav.classList.contains("is-open")) return;
+  var focusables = mainNav.querySelectorAll("a, button");
+  if (!focusables.length) return;
+  var first = focusables[0];
+  var last = focusables[focusables.length - 1];
+  if (e.shiftKey && document.activeElement === first) {
+    e.preventDefault();
+    last.focus();
+  } else if (!e.shiftKey && document.activeElement === last) {
+    e.preventDefault();
+    first.focus();
+  }
+}
+
 var menuClose = document.getElementById("menuClose");
 if (menuClose) {
   menuClose.addEventListener("click", function () {

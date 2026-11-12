@@ -196,8 +196,8 @@ function runPreloader() {
   var ANCHOR = { x: 293, y: 256 };
   var ANCHOR_R = 30;
 
-  var MIN_TIME = 2600;
-  var MAX_WAIT = 5000;
+  var MIN_TIME = 1200;
+  var MAX_WAIT = 2500;
   var HOLD = 350;
   var ZOOM = 1700;
 

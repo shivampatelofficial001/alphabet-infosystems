@@ -58,6 +58,7 @@ document.addEventListener("click", function (e) {
   setMenu(false);
 });
 
+document.addEventListener("keydown", trapMenuFocus);
 document.addEventListener("keydown", function (e) {
   if (e.key === "Escape" && menuToggle && menuToggle.getAttribute("aria-expanded") === "true") {
     setMenu(false);

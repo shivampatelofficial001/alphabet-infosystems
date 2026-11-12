@@ -250,7 +250,7 @@ a:hover { color: var(--navy-700); }
 .js:not(.is-ready) .hero .actions { opacity: 0; }
 
 .is-ready .hero h1 .ch {
-  animation: letterSettle 1.9s var(--ease) calc(var(--c, 0) * 48ms + 300ms) backwards;
+  animation: letterSettle 1.2s var(--ease) calc(var(--c, 0) * 25ms + 150ms) backwards;
 }
 
 @keyframes letterSettle {
@@ -264,8 +264,8 @@ a:hover { color: var(--navy-700); }
   100% { opacity: 1; color: var(--navy-900); filter: none; transform: none; }
 }
 
-.is-ready .hero .lead { animation: focusIn 2s var(--ease) 3.3s backwards; }
-.is-ready .hero .actions { animation: wipeIn 1.6s var(--ease-io) 3.9s backwards; }
+.is-ready .hero .lead { animation: focusIn 1.2s var(--ease) 1.2s backwards; }
+.is-ready .hero .actions { animation: wipeIn 1s var(--ease-io) 1.6s backwards; }
 
 @keyframes focusIn {
   from { opacity: 0; filter: blur(10px); transform: translateY(14px); }

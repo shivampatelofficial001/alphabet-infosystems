@@ -510,35 +510,34 @@ html.is-loading { overflow: hidden; }
   stroke: currentColor;
 }
 
-
 /* WhatsApp Button Style */
 .wa-container {
-  margin-top: var(--s-2); 
+  margin-top: var(--s-3) !important;
 }
 
 .btn-whatsapp {
-  display: inline-flex;
+  display: inline-flex !important;
   align-items: center;
   gap: var(--s-2);
-  background-color: #25D366; 2
+  background-color: #25D366 !important;
   color: #FFFFFF !important;
-  border: 1px solid #25D366;
-  padding: 0 var(--s-4);
-  border-radius: var(--r-control);
+  border: none !important;
+  padding: 10px 24px !important;
+  border-radius: 50px !important;
   font-weight: 500;
-  text-decoration: none;
-  transition: background-color 0.2s ease, transform 0.2s ease;
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
 }
 
 .btn-whatsapp:hover {
-  background-color: #1EBE5D; /* Hover Green */
-  border-color: #1EBE5D;
+  background-color: #1EBE5D !important;
   color: #FFFFFF !important;
-  transform: translateY(-2px); 
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(37, 211, 102, 0.3);
 }
 
-/* બટનની અંદરની આઇકોનને સફેદ કરવા માટે */
 .btn-whatsapp .icon {
-  stroke: #FFFFFF;
+  stroke: #FFFFFF !important;
   stroke-width: 2;
-}
+}વ

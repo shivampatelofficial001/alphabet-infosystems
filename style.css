@@ -541,3 +541,9 @@ html.is-loading { overflow: hidden; }
   stroke: #FFFFFF !important;
   stroke-width: 2;
 }
+
+@media (prefers-reduced-motion: reduce) {
+  .is-ready .hero .lead,
+  .is-ready .hero .actions { animation: none; }
+  .reveal-focus, .reveal-row > * { transition: none; }
+}

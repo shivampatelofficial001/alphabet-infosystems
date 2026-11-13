@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://shivampatelofficial001.github.io/alphabet-infosystems/sitemap.xml

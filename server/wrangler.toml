@@ -1,0 +1,18 @@
+name = "alphabet-form"
+main = "form-worker.js"
+compatibility_date = "2026-11-01"
+
+[vars]
+# Exact website addresses that may call this form handler, comma separated, no trailing slash.
+ALLOWED_ORIGINS = "https://shivampatelofficial001.github.io"
+TO_EMAIL = "shivam@alphabetinfosystems.com"
+FROM_EMAIL = "Alphabet Infosystems <forms@alphabetinfosystems.com>"
+
+# Create once:  npx wrangler kv namespace create RATE   (paste the id below)
+[[kv_namespaces]]
+binding = "RATE"
+id = "PASTE_KV_NAMESPACE_ID"
+
+# Secrets are NOT stored here. Set them with:
+#   npx wrangler secret put RESEND_API_KEY
+#   npx wrangler secret put RATE_SALT

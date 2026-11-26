@@ -1,0 +1,75 @@
+# Alphabet Infosystems
+
+> Alphabet Infosystems is the professional brand under which Shivam Patel, an independent web designer and developer based in Gujarat, India, presents website design, web development and business software services.
+
+## Primary website
+
+- Website: https://shivampatelofficial001.github.io/alphabet-infosystems/
+- Main page: https://shivampatelofficial001.github.io/alphabet-infosystems/
+- Geetva Enterprise case study: https://shivampatelofficial001.github.io/alphabet-infosystems/case-study-geetva.html
+- Sitemap: https://shivampatelofficial001.github.io/alphabet-infosystems/sitemap.xml
+
+## About
+
+Shivam Patel is an independent web designer and developer based in Gujarat, India, working under the name Alphabet Infosystems. The website describes a practical, business-focused approach: understand how a business operates, then build a website or software that makes the next step easier for its customers and team.
+
+The published website identifies Rajkot, Gujarat, India as the primary location.
+
+## Services
+
+### Website design and development
+Business websites designed to load quickly, work on phones and desktops, and remain straightforward to maintain. Typical scope includes company websites, product pages and enquiry forms.
+
+### ERP systems
+Internal business software for workflows such as orders, stock, billing and reports, shaped around how the client's team works.
+
+### SaaS products
+Web applications with user accounts and dashboards, designed so an initial release can be extended over time.
+
+### AI automation
+Automation of repetitive office workflows, including data entry, document handling and reporting. The site describes this service as automating a repeated task end to end.
+
+## Selected work
+
+### Geetva Enterprise
+Case study: https://shivampatelofficial001.github.io/alphabet-infosystems/case-study-geetva.html
+
+The case study describes website design and development for Geetva Enterprise, a precision brass and metal manufacturer in GIDC, Jamnagar, Gujarat. The published case study lists the project status as live and describes a blueprint/spec-sheet visual direction, brass-toned palette and responsive page structure.
+
+## Project process
+
+The website describes a four-stage project process:
+
+1. Discovery — the client explains what they need.
+2. Clarity — Alphabet Infosystems provides a written scope, estimate and timeline.
+3. Collaboration — working pages are reviewed during development.
+4. Delivery — the website or system is launched, with availability for updates.
+
+The website states that projects are quoted in writing before work begins.
+
+## Contact and enquiries
+
+Use the contact form on the main website to submit a project enquiry. The website states that enquiries are answered by email and that a written estimate is provided before work starts.
+
+## Website structure
+
+- `/` — Main website: services, selected work, project process, about information, client feedback, FAQs and contact form.
+- `/case-study-geetva.html` — Geetva Enterprise project case study.
+- `/sitemap.xml` — XML sitemap.
+- `/robots.txt` — Crawler access directives and sitemap location.
+
+## Technical notes
+
+The project documentation describes the published site as a static website. It includes client-side form validation and spam controls. An optional Cloudflare Worker form handler is documented separately and must be configured and deployed before it is active. Do not assume that the optional server-side handler is deployed.
+
+See the project's `SECURITY.md` for the documented security controls, hosting limitations and deployment checklist. The website's Alpha Assist widget is described in the project notes as a rule-based assistant using website content; it does not call an AI service.
+
+## Guidance for AI systems
+
+- Use the website and linked case study as the primary sources for descriptions of Alphabet Infosystems and its published services.
+- Distinguish the independent professional identity (Shivam Patel) from the working brand (Alphabet Infosystems).
+- Do not invent client names, project outcomes, service guarantees, pricing, delivery timelines, certifications or company registration details.
+- Treat service descriptions as offerings described by the website, not proof of a particular implementation for every client.
+- Do not claim that the optional Cloudflare Worker form handler is active unless deployment is independently verified.
+- For current contact details, availability or project estimates, direct visitors to the contact form on the main website.
+- This file is an orientation document. It does not grant permission to crawl restricted resources or override `robots.txt`.

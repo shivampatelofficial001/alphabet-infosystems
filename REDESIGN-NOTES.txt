@@ -1,0 +1,55 @@
+ALPHABET INFOSYSTEMS - REDESIGN NOTES (v4, motion update)
+
+Design
+- Fonts: Bricolage Grotesque (headings), Hanken Grotesk (body), Caveat (small handwritten touches only).
+- Palette: indigo primary and sky-blue secondary, page background #EAE8FD (primary-100). Tokens are at the top of style.css.
+- Mobile menu panel is 260px wide. No horizontal scrolling at any width.
+- Dark logo variants for dark backgrounds: assets/logo-light.svg and assets/logo-tagline-light.svg.
+- Motion (v4), patterns from motion.dev and MotionSites, plain JavaScript, no library:
+  * Hero headline: word by word blur-in, 100ms apart. Hero art springs in, the handwritten arrow draws itself.
+  * Section headings: each word rises out of a mask.
+  * Service cards, steps, facts: staggered spring entrance. Work card and form note open with a clip reveal.
+  * Service cards tilt toward the pointer on desktop.
+  * Buttons: label rolls letter by letter on hover and keyboard focus.
+  * About text: words light up as you scroll.
+  * Process: line fills and step numbers switch on as the line reaches them.
+  * Header hides when scrolling down and returns when scrolling up.
+  * Hero blobs and the work card grid drift slightly with the scroll.
+  * Fade between index and case study page (browsers with view transitions).
+  * Riverflow waves: four water layers per wave. They slide with the scroll at different speeds, rise in once, and swell with scroll speed. They stay still when you stop scrolling. For a slow drift while idle, set riverIdleSpeed in script.js (for example 0.02).
+  * Reduced-motion is respected everywhere.
+- Contact form: Formspree endpoint is configured in script.js as https://formspree.io/f/mvkaowdp.
+- SEO: index and case-study pages include page-specific titles, descriptions, canonical URLs, social metadata, robots directives and a sitemap reference.
+
+Before publishing
+1. Confirm the Formspree endpoint ID in script.js and its email verification.
+2. Set whatsappNumber and geetvaUrl in script.js if you want those links to appear.
+3. Upload the whole folder including assets/. If assets/ is missing on the host, the logo falls back to its alt text.
+4. Check that canonical and social preview URLs match the final hosting address.
+
+Process section update (2026-11-21): Replaced the desktop zig-zag process layout with a four-step S-curve journey. The connector uses the existing primary violet palette; mobile retains a vertical timeline. Existing process copy and scroll-based active-step highlighting are preserved.
+
+Process S-curve (2026-11-21 fix):
+- Dynamic SVG Bézier path calculated from live .step-num bounding boxes (no hardcoded coordinates).
+- ResizeObserver + font-ready + resize handlers keep the connector aligned at all desktop widths.
+- Scroll-driven stroke-dashoffset progress on the connector; step markers activate sequentially.
+- Mobile: clean vertical timeline (connector SVG hidden).
+- Brand colors and existing copy preserved. No extra steps added.
+
+
+Process section v3 (2026-11-21): S-shaped journey, final.
+- Layout: heading on its own row, then 4 cards alternating left and right (zig-zag) with one curved line through the numbered markers. Cards overlap vertically a little so the line really bends like an S.
+- The connector SVG now sits OUTSIDE the <ol> (valid HTML) inside .steps-wrap. The black blob in the old screenshot came from the old single-file build, where the path had no `fill:none`.
+- Line is drawn from live marker positions (ResizeObserver, font-ready, resize). Progress follows the point where the reading line meets the path, so the markers switch on exactly when the line reaches them. A small dot rides the line head.
+- Breakpoints: desktop and tablet above 760px use the S layout. At 760px and below: vertical timeline, line on the left.
+- Reduced motion: the line is fully drawn, no dot, no slide-in.
+- Security: see SECURITY.md. CSP/referrer meta tags, form hardening in script.js, optional server handler in ../server, header files _headers and .htaccess.
+
+
+Premium update (2026-11-24):
+- "Start a project" in the header/menu (all three pages) and in the hero is now .btn-cta: ink pill with a round arrow chip. The contact section heading with the same words is unchanged.
+- Contact: "Message on WhatsApp" is now a green WhatsApp logo button (.wa-logo). It still uses data-whatsapp, so the number in script.js (CONFIG.whatsappNumber) controls the link and its visibility.
+- Alpha Assist replaces the earlier chat widget. It is a rule-based assistant: answers are written in the ANSWERS and INTENTS lists in script.js, taken from the site's own content. It does not call any AI service. Edit those two lists to change what it says.
+- Testimonials: quote text uses the body font; flat label, hairline frame, solid avatar. HTML structure unchanged.
+- Mobile menu: glass values were already 0.42 (header pill) and 0.45 (menu panel); only the scrim behind them was lightened on screens under 900px.
+- Mobile hero buttons (480px and below): the first two sit side by side, the third spans the full width.

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://shivam.alphabetinfosystems.workers.dev/sitemap.xml

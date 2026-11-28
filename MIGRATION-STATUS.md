@@ -11,21 +11,17 @@
 ## Phase Overview
 
 - [x] **Phase 0 — Existing Website Audit**
-  - Inspected existing repository files (`index.html`, `case-study-geetva.html`, `404.html`, `style.css`, `script.js`, `assets/`, `server/`, `_headers`, `robots.txt`, `sitemap.xml`, `llms.txt`).
-  - Documented design tokens, wave dividers, S-curve process, Alpha Assist chatbot, WhatsApp integration, Formspree/Worker configuration, and CSP constraints.
-
 - [x] **Phase 1 — Eleventy Foundation**
-  - Uploaded `package.json`, `eleventy.config.js`, `.gitignore`, `MIGRATION-STATUS.md`, and `src/` to `migration` branch.
+- [x] **Phase 2 — Multi-Page Conversion**
+  - Reusable layouts, partials, 7 multi-page templates, and multi-page Alpha Assist verified (`a4c5175`).
 
-- [/] **Phase 2 — Multi-Page Conversion**
-  - [x] Create `src/_data/site.json`
-  - [x] Create `src/_includes/layouts/base.njk`
-  - [x] Create reusable partials (`svg-sprite.njk`, `header.njk`, `footer.njk`, `alpha-assist.njk`, `river-wave.njk`)
-  - [x] Create multi-page templates (`index.njk`, `services/index.njk`, `work/index.njk`, `work/geetva/index.njk`, `about/index.njk`, `contact/index.njk`, `404.njk`)
-  - [x] Update `script.js` Alpha Assist links for multi-page navigation
-  - [ ] Upload Phase 2 files to `migration` branch and verify Eleventy build (`_site/`)
+- [/] **Phase 3 — Clean URL Architecture**
+  - [x] Create `_redirects` for legacy `.html` URLs (`/case-study-geetva.html` -> `/work/geetva/`, etc.)
+  - [x] Update `assets/site.webmanifest` to root-relative `start_url` and icon paths
+  - [x] Update `eleventy.config.js` to passthrough copy `_redirects` and `_headers`
+  - [x] Audit all `src/` templates for root-relative asset paths and clean trailing-slash links
+  - [ ] Upload Phase 3 files to `migration` branch and verify `_site/` output
 
-- [ ] **Phase 3 — Clean URL Architecture**
 - [ ] **Phase 4 — Blog and Decap CMS**
 - [ ] **Phase 5 — Backend and Integrations**
 - [ ] **Phase 6 — SEO, Security and Quality Assurance**

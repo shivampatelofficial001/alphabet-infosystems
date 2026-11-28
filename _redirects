@@ -1,0 +1,9 @@
+# Cloudflare Pages Redirects for Alphabet Infosystems
+# Preserve legacy URLs and enforce clean trailing-slash architecture
+
+/case-study-geetva.html   /work/geetva/   301
+/case-study-geetva        /work/geetva/   301
+/services.html            /services/      301
+/work.html                /work/          301
+/about.html               /about/         301
+/contact.html             /contact/       301

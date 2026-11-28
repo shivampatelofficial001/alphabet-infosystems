@@ -4,15 +4,17 @@ compatibility_date = "2026-11-01"
 
 [vars]
 # Exact website addresses that may call this form handler, comma separated, no trailing slash.
-ALLOWED_ORIGINS = "https://shivampatelofficial001.github.io"
+# Update with your exact Cloudflare Pages preview/production URL (and custom domain once purchased).
+ALLOWED_ORIGINS = "https://shivam.alphabetinfosystems.workers.dev,https://alphabet-infosystems.pages.dev"
 TO_EMAIL = "shivam@alphabetinfosystems.com"
 FROM_EMAIL = "Alphabet Infosystems <forms@alphabetinfosystems.com>"
 
-# Create once:  npx wrangler kv namespace create RATE   (paste the id below)
+# IMPORTANT: Do NOT deploy this Worker until you create a real KV namespace and paste its ID below:
+#   npx wrangler kv namespace create RATE
 [[kv_namespaces]]
 binding = "RATE"
 id = "PASTE_KV_NAMESPACE_ID"
 
-# Secrets are NOT stored here. Set them with:
+# Secrets are NOT stored here. Set them before deploying:
 #   npx wrangler secret put RESEND_API_KEY
 #   npx wrangler secret put RATE_SALT

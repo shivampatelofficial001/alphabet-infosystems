@@ -1,0 +1,82 @@
+---
+layout: layouts/base.njk
+title: "Services | Websites, ERP, SaaS & AI Automation | Alphabet Infosystems"
+description: "Business websites, custom ERP systems, SaaS products, and AI automation built by Shivam Patel under Alphabet Infosystems in Rajkot, Gujarat."
+activeNav: "services"
+permalink: /services/index.html
+---
+  <section class="section" id="services">
+    <div class="container split">
+      <div class="split-head">
+        <h1 data-split>What I build</h1>
+      </div>
+      <ul class="services">
+        <li class="service s-web"><svg class="icon" aria-hidden="true"><use href="#i-globe"/></svg><h3>Websites</h3><p>Business websites that load quickly, read well on a phone and are easy to keep up to date.</p><p class="scope">Typical scope: company site, product pages, enquiry form.</p></li>
+        <li class="service s-erp"><svg class="icon" aria-hidden="true"><use href="#i-database"/></svg><h3>ERP systems</h3><p>Internal software for orders, stock, billing and reports, shaped around how your team already works.</p><p class="scope">Typical scope: orders, stock, invoices, reports.</p></li>
+        <li class="service s-saas"><svg class="icon" aria-hidden="true"><use href="#i-dash"/></svg><h3>SaaS products</h3><p>Web applications with user accounts and dashboards, built so the first version can keep growing.</p><p class="scope">Typical scope: sign-in, dashboards, a first working version.</p></li>
+        <li class="service s-ai"><svg class="icon" aria-hidden="true"><use href="#i-bot"/></svg><h3>AI automation</h3><p>Taking repetitive office work off your team, such as data entry, document handling and reporting.</p><p class="scope">Typical scope: one repeated task, automated end to end.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="section sec-tight-top" id="process">
+    <div class="container process">
+      <div class="process-head">
+        <h2>How a project works</h2>
+        <p>Every project is quoted in writing before any work starts.</p>
+      </div>
+      <div class="steps-wrap">
+        <svg class="steps-connector" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true" focusable="false">
+          <path class="track" d="" fill="none"/>
+          <path class="track-progress" d="" fill="none"/>
+          <circle class="track-dot" r="7" cx="-20" cy="-20"/>
+        </svg>
+      <ol class="steps steps-s-curve">
+        <li class="step">
+          <span class="step-num" aria-hidden="true">01</span>
+          <div class="step-content">
+            <span class="step-kicker">DISCOVERY</span>
+            <h3>Tell me what you need</h3>
+            <p>Send a short message. I reply by email and ask only what I need to know.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">02</span>
+          <div class="step-content">
+            <span class="step-kicker">CLARITY</span>
+            <h3>Get a written estimate</h3>
+            <p>You receive the scope, the price and the timeline in writing.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">03</span>
+          <div class="step-content">
+            <span class="step-kicker">COLLABORATION</span>
+            <h3>Review as it is built</h3>
+            <p>You see working pages along the way, so changes happen early.</p>
+          </div>
+        </li>
+        <li class="step">
+          <span class="step-num" aria-hidden="true">04</span>
+          <div class="step-content">
+            <span class="step-kicker">DELIVERY</span>
+            <h3>Launch and keep it running</h3>
+            <p>Your site or system goes live, and I stay available for updates.</p>
+          </div>
+        </li>
+      </ol>
+      </div>
+    </div>
+  </section>
+
+{% set wrapClass = "on-bg" %}
+{% set waveClass = "to-dark" %}
+{% set phase = "0.2" %}
+{% include "partials/river-wave.njk" %}
+  <section class="section-dark sec-case-dark">
+    <div class="container case-cta">
+      <h2>Need something similar?</h2>
+      <p>Tell me about your business and I will reply with a written estimate.</p>
+      <a class="btn btn-light" href="/contact/">Start a project</a>
+    </div>
+  </section>

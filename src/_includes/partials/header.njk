@@ -1,0 +1,24 @@
+<header class="site-header">
+  <div class="header-row">
+    <a class="brand" href="/"><img src="/assets/logo.svg" alt="{{ site.name }}" width="180" height="36"></a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"/></svg><span class="sr-only">Open menu</span></button>
+    <div class="scrim" data-scrim></div>
+    <div class="menu" id="site-menu">
+      <div class="menu-top"><button class="menu-close" type="button"><svg class="icon" aria-hidden="true"><use href="#i-x"/></svg><span class="sr-only">Close menu</span></button></div>
+      <nav aria-label="Main">
+        <ul class="menu-list">
+          <li><a class="menu-link{% if activeNav == 'home' %} is-active{% endif %}"{% if activeNav == 'home' %} aria-current="page"{% endif %} href="/" data-nav="home"><svg class="icon" aria-hidden="true"><use href="#i-home"/></svg><span>Home</span></a></li>
+          <li><a class="menu-link{% if activeNav == 'services' %} is-active{% endif %}"{% if activeNav == 'services' %} aria-current="page"{% endif %} href="/services/" data-nav="services"><svg class="icon" aria-hidden="true"><use href="#i-grid"/></svg><span>Services</span></a></li>
+          <li><a class="menu-link{% if activeNav == 'work' %} is-active{% endif %}"{% if activeNav == 'work' %} aria-current="page"{% endif %} href="/work/" data-nav="work"><svg class="icon" aria-hidden="true"><use href="#i-briefcase"/></svg><span>Work</span></a></li>
+          <li><a class="menu-link{% if activeNav == 'about' %} is-active{% endif %}"{% if activeNav == 'about' %} aria-current="page"{% endif %} href="/about/" data-nav="about"><svg class="icon" aria-hidden="true"><use href="#i-user"/></svg><span>About</span></a></li>
+          <li><a class="menu-link{% if activeNav == 'contact' %} is-active{% endif %}"{% if activeNav == 'contact' %} aria-current="page"{% endif %} href="/contact/" data-nav="contact"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg><span>Contact</span></a></li>
+        </ul>
+      </nav>
+      <a class="btn btn-cta menu-cta" href="/contact/">Start a project<span class="cta-chip" aria-hidden="true"><svg class="icon"><use href="#i-up-right"/></svg></span></a>
+      <div class="menu-foot">
+        <span>&copy; <span data-year>2026</span></span>
+        <img src="/assets/logo.svg" alt="{{ site.name }}" width="100" height="20">
+      </div>
+    </div>
+  </div>
+</header>

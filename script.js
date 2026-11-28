@@ -1191,10 +1191,10 @@ var MOTION = (function () {
   var MAX_NODES = 60;
 
   /* Links that can sit under an answer */
-  function contactAct() { return { label: "Open the contact form", href: "#contact", main: true }; }
+  function contactAct() { return { label: "Open the contact form", href: document.getElementById("contact") ? "#contact" : "/contact/", main: true }; }
   function whatsappAct() { return waHref ? { label: "Chat on WhatsApp", href: waHref, external: true, wa: true } : null; }
   function emailAct() { return CONFIG.email ? { label: "Email Shivam", href: "mailto:" + CONFIG.email } : null; }
-  function caseAct() { return { label: "Read the case study", href: "case-study-geetva.html", main: true }; }
+  function caseAct() { return { label: "Read the case study", href: "/work/geetva/", main: true }; }
 
   var ANSWERS = {
     welcome: { text: "Hello, I'm Alpha Assist. I can answer common questions about Alphabet Infosystems: what is built, how a project works and where Shivam is based. For anything specific, I'll point you to Shivam directly." },

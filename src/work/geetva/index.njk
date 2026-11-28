@@ -1,0 +1,83 @@
+---
+layout: layouts/base.njk
+title: "Geetva Enterprise case study | Shivam Patel"
+description: "How I designed and built the website for Geetva Enterprise, a precision brass and metal manufacturer in GIDC Jamnagar, Gujarat."
+activeNav: "work"
+permalink: /work/geetva/index.html
+schemaJson: |
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "CreativeWork",
+        "name": "Geetva Enterprise Website Case Study",
+        "description": "Case study for Geetva Enterprise, a precision brass and metal manufacturer in GIDC Jamnagar, Gujarat.",
+        "author": { "@type": "Person", "name": "Shivam Patel" },
+        "publisher": { "@type": "Organization", "name": "Alphabet Infosystems" }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://shivam.alphabetinfosystems.workers.dev/" },
+          { "@type": "ListItem", "position": 2, "name": "Work", "item": "https://shivam.alphabetinfosystems.workers.dev/work/" },
+          { "@type": "ListItem", "position": 3, "name": "Geetva Enterprise Case Study", "item": "https://shivam.alphabetinfosystems.workers.dev/work/geetva/" }
+        ]
+      }
+    ]
+  }
+---
+  <article class="section sec-case">
+    <div class="container">
+      <a class="back-link" href="/work/"><svg class="icon back-icon" aria-hidden="true"><use href="#i-down"/></svg>Back to all work</a>
+      <header class="case-head">
+        <h1 data-split>Geetva Enterprise</h1>
+        <p class="lead">A website for a precision brass and metal manufacturer in GIDC Jamnagar. The site is live in production.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#" data-geetva-link target="_blank" rel="noopener" hidden>Visit the live site</a>
+        </div>
+      </header>
+
+      <dl class="facts case-facts">
+        <div><dt>Client</dt><dd>Geetva Enterprise</dd></div>
+        <div><dt>Industry</dt><dd>Precision brass and metal manufacturing</dd></div>
+        <div><dt>Location</dt><dd>GIDC, Jamnagar, Gujarat</dd></div>
+        <div><dt>My role</dt><dd>Design and development</dd></div>
+        <div><dt>Status</dt><dd>Live</dd></div>
+      </dl>
+
+      <!-- Add a real screenshot when ready:
+      <figure><img src="assets/geetva-home.webp" alt="Geetva Enterprise home page on desktop" width="1200" height="750"></figure>
+      -->
+
+      <div class="case-body">
+        <section>
+          <h2>The brief</h2>
+          <p>Buyers of industrial components compare suppliers on specifications. Geetva needed a website that looks as exact as the parts it makes, and that a buyer can read quickly on a phone or a desktop.</p>
+        </section>
+        <section>
+          <h2>The approach</h2>
+          <ul>
+            <li>A blueprint and spec-sheet visual language, with clear labels and measured spacing.</li>
+            <li>A brass-toned palette on a clean base, so the products stay the focus.</li>
+            <li>Plain page structure that reads well on small screens.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>What was delivered</h2>
+          <p>A complete business website for Geetva Enterprise, designed and developed by me and now running in production.</p>
+        </section>
+      </div>
+    </div>
+  </article>
+
+{% set wrapClass = "on-bg" %}
+{% set waveClass = "to-dark" %}
+{% set phase = "0.2" %}
+{% include "partials/river-wave.njk" %}
+  <section class="section-dark sec-case-dark">
+    <div class="container case-cta">
+      <h2>Need something similar?</h2>
+      <p>Tell me about your business and I will reply with a written estimate.</p>
+      <a class="btn btn-light" href="/contact/">Start a project</a>
+    </div>
+  </section>

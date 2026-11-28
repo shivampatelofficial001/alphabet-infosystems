@@ -10,30 +10,23 @@
 
 ## Phase Overview
 
-- [ ] **Phase 0 — Existing Website Audit**
-  - Inspect existing repository files (`index.html`, `case-study-geetva.html`, `style.css`, `script.js`, `assets/`, `form-worker.js`, `wrangler.toml`, `_headers`, `sitemap.xml`, `robots.txt`, `llms.txt`).
-  - Document existing sections, animations, Alpha Assist chatbot, WhatsApp integration, and Formspree/Worker configuration.
+- [x] **Phase 0 — Existing Website Audit**
+  - Inspected existing repository files (`index.html`, `case-study-geetva.html`, `404.html`, `style.css`, `script.js`, `assets/`, `server/`, `_headers`, `robots.txt`, `sitemap.xml`, `llms.txt`).
+  - Documented design tokens, wave dividers, S-curve process, Alpha Assist chatbot, WhatsApp integration, Formspree/Worker configuration, and CSP constraints.
 
-- [/] **Phase 1 — Eleventy Foundation**
-  - [x] Prepare `package.json`
-  - [x] Prepare `eleventy.config.js`
-  - [x] Prepare `.gitignore`
-  - [x] Prepare `MIGRATION-STATUS.md`
-  - [ ] Upload and commit Phase 1 files to the `migration` branch
-  - [ ] Create `src/` directory and verify initial Eleventy build (`_site/`)
+- [x] **Phase 1 — Eleventy Foundation**
+  - Uploaded `package.json`, `eleventy.config.js`, `.gitignore`, `MIGRATION-STATUS.md`, and `src/` to `migration` branch.
 
-- [ ] **Phase 2 — Multi-Page Conversion**
+- [/] **Phase 2 — Multi-Page Conversion**
+  - [x] Create `src/_data/site.json`
+  - [x] Create `src/_includes/layouts/base.njk`
+  - [x] Create reusable partials (`svg-sprite.njk`, `header.njk`, `footer.njk`, `alpha-assist.njk`, `river-wave.njk`)
+  - [x] Create multi-page templates (`index.njk`, `services/index.njk`, `work/index.njk`, `work/geetva/index.njk`, `about/index.njk`, `contact/index.njk`, `404.njk`)
+  - [x] Update `script.js` Alpha Assist links for multi-page navigation
+  - [ ] Upload Phase 2 files to `migration` branch and verify Eleventy build (`_site/`)
+
 - [ ] **Phase 3 — Clean URL Architecture**
 - [ ] **Phase 4 — Blog and Decap CMS**
 - [ ] **Phase 5 — Backend and Integrations**
 - [ ] **Phase 6 — SEO, Security and Quality Assurance**
 - [ ] **Phase 7 — Cloudflare Deployment**
-
----
-
-## Phase 1 Foundation Files
-
-1. `package.json` — Defines `@11ty/eleventy` dependency and build scripts (`build`, `start`, `clean`).
-2. `eleventy.config.js` — Configures `src/` input, `_site/` output, Nunjucks templates, and passthrough copy for `assets/`, `style.css`, and `script.js`.
-3. `.gitignore` — Excludes `node_modules/`, `_site/`, `.wrangler/`, `.DS_Store`, and `Thumbs.db` from Git tracking.
-4. `MIGRATION-STATUS.md` — Tracks migration progress across all phases.

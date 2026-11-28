@@ -1,0 +1,31 @@
+<!-- Alpha Assist -->
+<div class="aa" data-aa>
+  <button class="aa-launch" type="button" aria-expanded="false" aria-controls="aa-panel" data-aa-toggle>
+    <span class="aa-mark" aria-hidden="true">
+      <img class="aa-glyph aa-glyph-alpha aa-brand" src="/assets/icon.svg" alt="" width="340" height="230">
+      <svg class="aa-glyph aa-glyph-x" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </span>
+    <span class="aa-launch-label">Alpha Assist</span>
+  </button>
+  <section class="aa-panel" id="aa-panel" role="dialog" aria-label="Alpha Assist">
+    <header class="aa-head">
+      <span class="aa-mark aa-mark-head" aria-hidden="true"><img class="aa-brand" src="/assets/icon.svg" alt="" width="340" height="230"></span>
+      <div class="aa-title"><strong>Alpha Assist</strong><span>Answers about {{ site.name }}</span></div>
+      <button class="aa-close" type="button" data-aa-close aria-label="Close Alpha Assist"><svg class="aa-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </header>
+    <div class="aa-log" data-aa-log role="log" aria-live="polite" aria-relevant="additions"></div>
+    <div class="aa-chips" data-aa-chips role="group" aria-label="Suggested questions">
+      <button type="button" data-aa-q="services">What do you build?</button>
+      <button type="button" data-aa-q="pricing">How does pricing work?</button>
+      <button type="button" data-aa-q="start">How do I start?</button>
+      <button type="button" data-aa-q="work">Show me your work</button>
+      <button type="button" data-aa-q="location">Where are you based?</button>
+    </div>
+    <form class="aa-form" data-aa-form autocomplete="off">
+      <label class="sr-only" for="aa-input">Your question</label>
+      <input id="aa-input" type="text" maxlength="240" placeholder="Ask a question&hellip;" data-aa-input>
+      <button type="submit" aria-label="Send question"><svg class="aa-glyph" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M5.5 11.5 12 5l6.5 6.5"/></svg></button>
+    </form>
+    <p class="aa-note">Automated assistant. Shivam replies to project enquiries personally.</p>
+  </section>
+</div>

@@ -1,0 +1,12 @@
+{
+  "name": "Alphabet Infosystems",
+  "tagline": "Delivering dependable software solutions.",
+  "author": "Shivam Patel",
+  "email": "shivam@alphabetinfosystems.com",
+  "url": "https://shivam.alphabetinfosystems.workers.dev",
+  "locale": "en_IN",
+  "themeColor": "#EAE8FD",
+  "ogImage": "/assets/og-image.png",
+  "ogImageAlt": "Alphabet Infosystems. Web developer in Rajkot. Websites, ERP, SaaS and AI automation.",
+  "location": "Rajkot, Gujarat, India"
+}

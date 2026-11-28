@@ -1,0 +1,106 @@
+---
+layout: layouts/base.njk
+title: "Contact | Start a Project | Alphabet Infosystems"
+description: "Contact Shivam Patel at Alphabet Infosystems by email, WhatsApp, or project enquiry form for a written estimate."
+activeNav: "contact"
+permalink: /contact/index.html
+---
+  <section class="section section-paper contact" id="contact" aria-labelledby="contact-title">
+    <div class="container contact-split">
+      <div class="contact-info">
+        <div>
+          <h1 id="contact-title" data-split>Start a project</h1>
+          <p class="lead">Tell me what you need. I read every message and reply by email.</p>
+        </div>
+        <dl class="cinfo">
+          <div><dt>Email</dt><dd><a href="mailto:shivam@alphabetinfosystems.com">shivam@alphabetinfosystems.com</a></dd></div>
+          <div data-whatsapp-item hidden>
+            <dt>WhatsApp</dt>
+            <dd>
+              <a class="wa-logo" href="#" data-whatsapp title="Chat on WhatsApp" aria-label="Chat on WhatsApp">
+                <svg class="icon icon-fill" aria-hidden="true"><use href="#i-wa-logo"/></svg>
+              </a>
+            </dd>
+          </div>
+          <div><dt>Based in</dt><dd>Rajkot, Gujarat, India</dd></div>
+        </dl>
+        <div class="cnext">
+          <h3>What happens next</h3>
+          <ol>
+            <li>You send a short message about what you need.</li>
+            <li>I reply by email, with questions if anything is unclear.</li>
+            <li>You get a written estimate with the scope and the price. Nothing starts until you agree.</li>
+          </ol>
+        </div>
+      </div>
+
+      <form class="cform" id="contact-form" novalidate>
+        <div class="cf-body">
+          <div class="cf-row">
+            <div class="cf-field">
+              <label for="name">Name</label>
+              <input id="name" name="name" type="text" maxlength="80" placeholder="Your full name" autocomplete="name" required aria-describedby="name-error">
+              <p class="field-error" id="name-error"></p>
+            </div>
+            <div class="cf-field">
+              <label for="email">Email</label>
+              <input id="email" name="email" type="email" maxlength="254" placeholder="you@company.com" autocomplete="email" required aria-describedby="email-error">
+              <p class="field-error" id="email-error"></p>
+            </div>
+          </div>
+
+          <div class="cf-field">
+            <label for="phone">Phone <span class="cf-opt">optional</span></label>
+            <input id="phone" name="phone" type="tel" maxlength="30" inputmode="tel" placeholder="+91 98765 43210" autocomplete="tel" aria-describedby="phone-error">
+            <p class="field-error" id="phone-error"></p>
+          </div>
+
+          <div class="cf-row">
+            <div class="cf-field">
+              <label for="interest">Service <span class="cf-opt">optional</span></label>
+              <select id="interest" name="interest">
+                <option value="">Select a service</option>
+                <option>A website</option>
+                <option>An ERP system</option>
+                <option>A SaaS product</option>
+                <option>AI automation</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="cf-field">
+              <label for="budget">Budget <span class="cf-opt">optional</span></label>
+              <select id="budget" name="budget">
+                <option value="">Select a range</option>
+                <option>Not decided yet</option>
+                <option>Under ₹50,000</option>
+                <option>₹50,000 to ₹1,50,000</option>
+                <option>₹1,50,000 to ₹5,00,000</option>
+                <option>Above ₹5,00,000</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="cf-field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" maxlength="2000" placeholder="What does your business do, and what should this project achieve?" required aria-describedby="message-error"></textarea>
+            <p class="field-error" id="message-error"></p>
+          </div>
+
+          <div class="hp" aria-hidden="true">
+            <label>Leave this empty <input name="company" type="text" tabindex="-1" autocomplete="off"></label>
+          </div>
+
+          <div class="cf-actions">
+            <button class="btn btn-primary btn-send" type="submit"><span class="btn-label">Send message</span><svg class="icon icon-send" aria-hidden="true"><use href="#i-send"/></svg><span class="spin" aria-hidden="true"></span></button>
+            <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </div>
+        <div class="sent" role="status" aria-live="polite">
+          <svg class="icon" aria-hidden="true"><use href="#i-check"/></svg>
+          <h3>Message sent</h3>
+          <p data-sent-text>Thank you. I will reply by email.</p>
+          <button class="btn btn-light" type="button" data-write-again>Write another message</button>
+        </div>
+      </form>
+    </div>
+  </section>

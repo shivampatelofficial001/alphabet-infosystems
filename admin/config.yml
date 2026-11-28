@@ -1,0 +1,40 @@
+backend:
+  name: github
+  repo: shivampatelofficial001/alphabet-infosystems
+  # Keep on migration branch during staging; switch to main in Phase 7 when live
+  branch: migration
+  # Update base_url to your Cloudflare Pages URL (or custom domain) in Phase 7
+  base_url: https://alphabet-infosystems.pages.dev
+  auth_endpoint: api/auth
+
+media_folder: "assets/uploads"
+public_folder: "/assets/uploads"
+
+collections:
+  - name: "blog"
+    label: "Blog Articles"
+    folder: "src/blog/posts"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD", date_format: "YYYY-MM-DD", time_format: false }
+      - { label: "Author", name: "author", widget: "string", default: "Alphabet Infosystems" }
+      - label: "Category"
+        name: "category"
+        widget: "select"
+        options:
+          - "Web Development"
+          - "Technology"
+          - "UI/UX"
+          - "Automation"
+        default: "Web Development"
+      - label: "Language"
+        name: "lang"
+        widget: "select"
+        options:
+          - { label: "English", value: "en" }
+          - { label: "Gujarati", value: "gu" }
+        default: "en"
+      - { label: "Body", name: "body", widget: "markdown" }

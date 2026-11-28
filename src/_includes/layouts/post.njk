@@ -1,0 +1,36 @@
+---
+layout: layouts/base.njk
+activeNav: "blog"
+ogType: "article"
+---
+<article class="section sec-case">
+  <div class="container">
+    <a class="back-link" href="/blog/"><svg class="icon back-icon" aria-hidden="true"><use href="#i-down"/></svg>Back to all articles</a>
+    <header class="case-head post-head">
+      <div class="blog-meta">
+        {% if category %}<span class="blog-cat">{{ category }}</span>{% endif %}
+        {% if date %}<time datetime="{{ date | isoDate }}">{{ date | readableDate }}</time>{% endif %}
+        {% if lang == 'gu' %}<span class="blog-lang">Gujarati</span>{% endif %}
+      </div>
+      <h1 data-split>{{ title }}</h1>
+      {% if description %}<p class="lead">{{ description }}</p>{% endif %}
+      <p class="post-author">By {{ author or "Alphabet Infosystems" }}</p>
+    </header>
+
+    <div class="case-body post-body"{% if lang == 'gu' %} lang="gu"{% endif %}>
+      {{ content | safe }}
+    </div>
+  </div>
+</article>
+
+{% set wrapClass = "on-bg" %}
+{% set waveClass = "to-dark" %}
+{% set phase = "0.2" %}
+{% include "partials/river-wave.njk" %}
+<section class="section-dark sec-case-dark">
+  <div class="container case-cta">
+    <h2>Have a project in mind?</h2>
+    <p>Tell me what your business needs and I will reply with a written estimate.</p>
+    <a class="btn btn-light" href="/contact/">Start a project</a>
+  </div>
+</section>

@@ -1,0 +1,48 @@
+---
+layout: layouts/base.njk
+title: "Blog | Alphabet Infosystems"
+description: "Practical articles on web development, technology, UI/UX, and automation from Alphabet Infosystems."
+activeNav: "blog"
+permalink: /blog/index.html
+---
+<section class="section sec-case">
+  <div class="container">
+    <header class="case-head">
+      <h1 data-split>Blog</h1>
+      <p class="lead">Practical notes on web development, technology, UI/UX, and automation from Alphabet Infosystems.</p>
+    </header>
+
+    {% if collections.posts and collections.posts.length %}
+    <ul class="blog-grid">
+      {% for post in collections.posts %}
+      <li class="blog-card">
+        <a class="blog-card-link" href="{{ post.url }}">
+          <div class="blog-meta">
+            {% if post.data.category %}<span class="blog-cat">{{ post.data.category }}</span>{% endif %}
+            {% if post.date %}<time datetime="{{ post.date | isoDate }}">{{ post.date | readableDate }}</time>{% endif %}
+            {% if post.data.lang == 'gu' %}<span class="blog-lang">Gujarati</span>{% endif %}
+          </div>
+          <h2>{{ post.data.title }}</h2>
+          {% if post.data.description %}<p>{{ post.data.description }}</p>{% endif %}
+          <span class="project-link">Read article <svg class="icon" aria-hidden="true"><use href="#i-up-right"/></svg></span>
+        </a>
+      </li>
+      {% endfor %}
+    </ul>
+    {% else %}
+    <p class="lead">Articles are coming soon.</p>
+    {% endif %}
+  </div>
+</section>
+
+{% set wrapClass = "on-bg" %}
+{% set waveClass = "to-dark" %}
+{% set phase = "0.2" %}
+{% include "partials/river-wave.njk" %}
+<section class="section-dark sec-case-dark">
+  <div class="container case-cta">
+    <h2>Need help with a software or web project?</h2>
+    <p>Send a short message and receive a written estimate with scope, price, and timeline.</p>
+    <a class="btn btn-light" href="/contact/">Start a project</a>
+  </div>
+</section>

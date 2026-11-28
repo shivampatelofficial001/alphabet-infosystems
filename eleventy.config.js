@@ -1,20 +1,44 @@
 /**
  * Eleventy (11ty) Configuration for Alphabet Infosystems
- * Phase 3: Clean URL Architecture & Passthrough Assets
+ * Phase 4: Blog Collection, Date Filter, and Decap CMS Passthrough
  */
 
 module.exports = function (eleventyConfig) {
-  // Passthrough copy for static assets, stylesheet, scripts, and Cloudflare Pages config files
-  // Paths are relative to the project root and copied directly to _site/
+  // Passthrough copy for static assets, stylesheet, scripts, CMS admin, and Cloudflare Pages config files
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("style.css");
   eleventyConfig.addPassthroughCopy("script.js");
+  eleventyConfig.addPassthroughCopy("admin");
   eleventyConfig.addPassthroughCopy("_redirects");
   eleventyConfig.addPassthroughCopy("_headers");
 
   // Watch static assets for changes during local development
   eleventyConfig.addWatchTarget("./style.css");
   eleventyConfig.addWatchTarget("./script.js");
+
+  // Blog posts collection sorted newest-first
+  eleventyConfig.addCollection("posts", function (collectionApi) {
+    return collectionApi.getFilteredByTag("post").sort(function (a, b) {
+      return b.date - a.date;
+    });
+  });
+
+  // Human-readable date filter for blog posts
+  eleventyConfig.addFilter("readableDate", function (dateObj) {
+    if (!dateObj) { return ""; }
+    return new Intl.DateTimeFormat("en-IN", {
+      year: "numeric",
+      month: "long",
+      day: "numeric",
+      timeZone: "UTC"
+    }).format(new Date(dateObj));
+  });
+
+  // ISO date filter for <time datetime="..."> and structured data
+  eleventyConfig.addFilter("isoDate", function (dateObj) {
+    if (!dateObj) { return ""; }
+    return new Date(dateObj).toISOString().split("T")[0];
+  });
 
   return {
     dir: {

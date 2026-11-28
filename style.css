@@ -442,3 +442,23 @@ body.no-scroll .aa{opacity:0;visibility:hidden;pointer-events:none}
 .sec-case{padding-bottom:clamp(40px,6vw,72px)}
 .sec-case-dark{padding-block:clamp(56px,8vw,96px)}
 .back-icon{transform:rotate(90deg);margin-right:4px}
+
+/* ---------- Blog & Articles ---------- */
+.blog-grid{list-style:none;margin:0;padding:0;display:grid;gap:24px;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr))}
+.blog-card{display:flex}
+.blog-card-link{display:flex;flex-direction:column;gap:14px;width:100%;padding:28px;border:1px solid var(--primary-200);border-radius:var(--r2);background:var(--paper);text-decoration:none;color:var(--text);transition:transform .25s var(--spring),border-color .2s,box-shadow .25s}
+.blog-card-link:hover{transform:translateY(-3px);border-color:var(--primary-400);box-shadow:0 18px 38px -22px rgba(31,26,82,.3)}
+.blog-card-link h2{font-size:1.35rem;line-height:1.25;color:var(--ink)}
+.blog-card-link p{color:var(--muted);line-height:1.65;flex:1}
+.blog-meta{display:flex;flex-wrap:wrap;align-items:center;gap:10px;font-size:.86rem;color:var(--muted);font-weight:600}
+.blog-cat,.blog-lang{display:inline-flex;align-items:center;padding:4px 12px;border-radius:999px;background:var(--primary-100);color:var(--primary-800);font-size:.8rem;font-weight:700}
+.blog-lang{background:var(--secondary-100);color:var(--secondary-900)}
+.post-head{padding-bottom:28px;border-bottom:1px solid var(--primary-200);margin-bottom:32px}
+.post-head .blog-meta{margin-bottom:16px}
+.post-author{margin-top:16px;font-size:.95rem;font-weight:600;color:var(--muted)}
+.post-body{max-width:70ch}
+.post-body[lang="gu"]{font-family:"Noto Sans Gujarati",var(--body);line-height:1.85}
+.post-body h2{margin-top:36px;margin-bottom:12px;font-size:1.55rem}
+.post-body p+p{margin-top:16px}
+.post-body ol,.post-body ul{margin-top:14px;padding-left:22px}
+.post-body li+li{margin-top:8px}

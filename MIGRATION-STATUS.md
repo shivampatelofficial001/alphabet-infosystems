@@ -15,13 +15,14 @@
 - [x] **Phase 2 — Multi-Page Conversion**
 - [x] **Phase 3 — Clean URL Architecture**
 - [x] **Phase 4 — Blog and Decap CMS**
-  - Blog listing, post layout, Gujarati/English support, sample article, Decap CMS (`/admin/`), and Pages OAuth Functions built (`Copied 17 Wrote 9 files in 0.69s`).
+- [x] **Phase 5 — Backend and Integrations**
+  - Audited `server/form-worker.js`, verified 15/15 `test-worker.mjs` checks, updated `wrangler.toml` `ALLOWED_ORIGINS` (`6f5f4f6`).
 
-- [/] **Phase 5 — Backend and Integrations**
-  - [x] Audited `server/form-worker.js` and ran `server/test-worker.mjs` (15/15 checks passed)
-  - [x] Updated `server/wrangler.toml` `ALLOWED_ORIGINS` (replacing legacy `github.io` origin)
-  - [x] Verified Formspree (`https://formspree.io/f/mvkaowdp`) and WhatsApp (`919106096530`) remain active and untouched in `script.js`
-  - [ ] Upload Phase 5 updates to `migration` branch (keep Formspree active until Worker KV ID, `RESEND_API_KEY`, and `RATE_SALT` are configured)
+- [/] **Phase 6 — SEO, Security and Quality Assurance**
+  - [x] Create dynamic `src/sitemap.njk` (`/sitemap.xml`)
+  - [x] Update `robots.txt` and `llms.txt` for multi-page URLs and add passthrough copy in `eleventy.config.js`
+  - [x] Update `_headers` with strict public CSP and `/admin/*` Decap CMS CSP + `X-Robots-Tag`
+  - [x] Add `Article` and `BreadcrumbList` JSON-LD to `src/_includes/layouts/post.njk`
+  - [ ] Upload Phase 6 files to `migration` branch and verify `_site/sitemap.xml`, `_site/robots.txt`, `_site/llms.txt`
 
-- [ ] **Phase 6 — SEO, Security and Quality Assurance**
 - [ ] **Phase 7 — Cloudflare Deployment**

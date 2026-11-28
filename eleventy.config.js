@@ -1,14 +1,16 @@
 /**
  * Eleventy (11ty) Configuration for Alphabet Infosystems
- * Phase 4: Blog Collection, Date Filter, and Decap CMS Passthrough
+ * Phase 6: SEO, Security & Quality Assurance
  */
 
 module.exports = function (eleventyConfig) {
-  // Passthrough copy for static assets, stylesheet, scripts, CMS admin, and Cloudflare Pages config files
+  // Passthrough copy for static assets, stylesheet, scripts, CMS admin, SEO, and Cloudflare config files
   eleventyConfig.addPassthroughCopy("assets");
   eleventyConfig.addPassthroughCopy("style.css");
   eleventyConfig.addPassthroughCopy("script.js");
   eleventyConfig.addPassthroughCopy("admin");
+  eleventyConfig.addPassthroughCopy("robots.txt");
+  eleventyConfig.addPassthroughCopy("llms.txt");
   eleventyConfig.addPassthroughCopy("_redirects");
   eleventyConfig.addPassthroughCopy("_headers");
 

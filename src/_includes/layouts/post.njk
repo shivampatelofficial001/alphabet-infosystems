@@ -3,6 +3,40 @@ layout: layouts/base.njk
 activeNav: "blog"
 ogType: "article"
 ---
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Article",
+      "headline": {{ title | dump | safe }},
+      "description": {{ description | dump | safe }},
+      "datePublished": "{{ date | isoDate }}",
+      "inLanguage": "{{ lang or 'en' }}",
+      "author": {
+        "@type": "Organization",
+        "name": {{ (author or "Alphabet Infosystems") | dump | safe }}
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Alphabet Infosystems"
+      },
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": "{{ site.url }}{{ page.url }}"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ site.url }}/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "{{ site.url }}/blog/" },
+        { "@type": "ListItem", "position": 3, "name": {{ title | dump | safe }}, "item": "{{ site.url }}{{ page.url }}" }
+      ]
+    }
+  ]
+}
+</script>
 <article class="section sec-case">
   <div class="container">
     <a class="back-link" href="/blog/"><svg class="icon back-icon" aria-hidden="true"><use href="#i-down"/></svg>Back to all articles</a>
